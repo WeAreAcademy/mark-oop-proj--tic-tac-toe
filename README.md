@@ -18,7 +18,7 @@ tags:
 
 ## Context
 
-You work for a game development company.
+You are interning for a game development company.
 
 You have inherited a Tic Tac Toe project that was started during a small internal hackathon, which the company would like to polish up.
 
