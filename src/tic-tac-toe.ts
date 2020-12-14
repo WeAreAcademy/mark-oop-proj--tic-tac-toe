@@ -219,10 +219,10 @@ type Board = [Row, Row, Row]
  */
 interface BoardPosition {
   /** Non-zero based row number */
-  row: number,
+  row: 1 | 2 | 3,
 
   /** Non-zero based column number */
-  col: number
+  col: 1 | 2 | 3
 }
 
 export default TicTacToe
