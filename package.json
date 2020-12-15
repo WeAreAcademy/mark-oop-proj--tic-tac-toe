@@ -2,6 +2,7 @@
   "name": "mark-oop-proj--tic-tac-toe",
   "version": "1.0.0",
   "scripts": {
+    "start": "ts-node src/tic-tac-toe",
     "test": "jest --watch"
   },
   "author": "",
