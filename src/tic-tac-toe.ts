@@ -103,16 +103,17 @@ class TicTacToe implements ITicTacToe {
      * 
      * (We'll convert these to BoardPosition objects later.)
      * 
-     * We group here the different possible combinations needed to declare victory.
+     * We group here the different possible combinations needed to declare victory: a combination is an array of [row, col] coordinates.
      */
+    type WinCombination = [RowOrColNumber, RowOrColNumber][]
 
-    const rowWins = [
+    const rowWins: WinCombination[] = [
       [[1, 1], [1, 2], [1, 3]],
       [[2, 1], [2, 2], [2, 3]],
       [[3, 1], [3, 2], [3, 3]]
     ]
 
-    const colWins = [
+    const colWins: WinCombination[] = [
       [[1, 1], [2, 1], [3, 1]],
       [[1, 2], [2, 2], [3, 2]],
       [[1, 3], [2, 3], [3, 3]]
@@ -214,15 +215,17 @@ type Row = [Cell, Cell, Cell]
  */
 type Board = [Row, Row, Row]
 
+type RowOrColNumber = 1 | 2 | 3
+
 /**
  * Represents non-zero based coordinates for a given board cell.
  */
 interface BoardPosition {
   /** Non-zero based row number */
-  row: 1 | 2 | 3,
+  row: RowOrColNumber,
 
   /** Non-zero based column number */
-  col: 1 | 2 | 3
+  col: RowOrColNumber
 }
 
 export default TicTacToe
